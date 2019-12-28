@@ -1,0 +1,45 @@
+---
+title: "Tutorial"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+library(learnr)
+library(readxl)
+
+klausimai <- read_xlsx("question_bank.xlsx")
+
+```
+
+
+## Topic 1
+
+### Quiz
+
+
+```{r}
+quiz(
+question(klausimai[1,2],
+         answer(klausimai[1,3], correct = TRUE),
+         answer(klausimai[1,4]),
+         answer(klausimai[1,5]),
+         answer(klausimai[1,6]),
+         random_answer_order = TRUE, type = "single"),
+question(klausimai[2,2],
+         answer(klausimai[2,3], correct = TRUE),
+         answer(klausimai[2,4]),
+         answer(klausimai[2,5]),
+         answer(klausimai[2,6]),
+         random_answer_order = TRUE, type = "single"),
+)
+
+```
+
+
+
+
+
