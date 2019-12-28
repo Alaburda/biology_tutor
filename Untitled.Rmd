@@ -10,8 +10,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 library(learnr)
 library(readxl)
+library(readr)
 
-klausimai <- read_xlsx("question_bank.xlsx")
+klausimai <- read_csv2("question_bank.csv", locale(encoding = "UTF-8"), col_names = TRUE, col_types = NULL)
 
 ```
 
